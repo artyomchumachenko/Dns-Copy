@@ -171,7 +171,7 @@ public class MainFormController implements Initializable {
                 signAccButton.setVisible(false);
                 signAccButton.setDisable(true);
 
-                regAccButton.setText("Профиль (" + user.getLogin() + ")");
+                regAccButton.setText(user.getLogin());
                 regAccButton.setOnMouseClicked(event -> {
                     showProfile();
                 });

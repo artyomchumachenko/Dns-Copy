@@ -62,7 +62,9 @@ public class RegistController {
                                 "Регистрация",
                                 "Регистрация выполнена успешно!"
                         );
-                    }
+                    } else MainFormController.showAlertWithoutHeaderText(
+                            "Регистрация", "Пароли не совпадают"
+                    );
                 } else MainFormController.showAlertWithoutHeaderText(
                         "Регистрация", "Пользователь с таким логином уже существует!"
                 );
