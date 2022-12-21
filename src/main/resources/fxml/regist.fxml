@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainAnchorPane" prefHeight="346.0" prefWidth="487.0" snapToPixel="false" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.mai.coursework.dns.controller.RegistController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+   <children>
+      <AnchorPane layoutX="144.0" layoutY="4.0" prefHeight="61.0" prefWidth="200.0">
+         <children>
+            <Label layoutX="35.0" layoutY="18.0" style="-fx-font-size: 20;" text="Регистрация">
+               <font>
+                  <Font name="Verdana" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <VBox layoutX="81.0" layoutY="72.0" prefHeight="97.0" prefWidth="325.0" spacing="20.0">
+         <children>
+            <TextField fx:id="loginTextField" focusTraversable="false" prefHeight="34.0" prefWidth="326.0" promptText="Логин*" style="-fx-font-size: 16;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="passwordTextField" focusTraversable="false" prefHeight="34.0" prefWidth="326.0" promptText="Пароль*" style="-fx-font-size: 16;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </PasswordField>
+            <PasswordField fx:id="passwordTextField1" focusTraversable="false" prefHeight="34.0" prefWidth="326.0" promptText="Подтвердите пароль*" style="-fx-font-size: 16;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </PasswordField>
+            <TextField fx:id="phoneTextField" focusTraversable="false" prefHeight="34.0" prefWidth="326.0" promptText="Номер телефона" style="-fx-font-size: 16;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+         </children>
+      </VBox>
+      <Button fx:id="tryToEnterButton" layoutX="151.0" layoutY="298.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="185.0" style="-fx-font-size: 15;" text="Зарегистрироваться">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,10 @@
+#regAccButton, #signAccButton, #acceptFilters, #cancelFilters {
+    -fx-background-color: #54a4ff;
+}
+#filterVBox {
+    -fx-background-color: #e0e0e0;
+}
+* {
+    -fx-font-family: "18VAG Rounded M";
+    -fx-font-size: 14;
+}
