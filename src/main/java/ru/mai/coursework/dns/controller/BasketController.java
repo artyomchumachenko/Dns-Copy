@@ -3,7 +3,6 @@ package ru.mai.coursework.dns.controller;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseButton;
@@ -21,9 +20,6 @@ public class BasketController {
 
     @FXML
     private ListView<String> productsInBasket;
-
-    @FXML
-    private Button delete;
 
     @FXML
     void initialize() {

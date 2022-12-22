@@ -1,7 +1,6 @@
 package ru.mai.coursework.dns.controller;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import ru.mai.coursework.dns.controller.branch.ProductViewController;
@@ -21,9 +20,6 @@ public class ShowChsController {
 
     private static Product openedProduct = null;
 
-    @FXML
-    private Button addToBasket;
-
     public ShowChsController() {
         openedProduct = ProductViewController.getChosenProduct();
     }
@@ -34,12 +30,9 @@ public class ShowChsController {
     }
 
     private void showCharacteristics() {
-        System.out.println("====================");
         System.out.println(openedProduct.getProductName());
         productName.setText(openedProduct.getProductName());
         for (ProductCh ch : openedProduct.getProductChs()) {
-            System.out.println("Product chName = " + ch.getCharacteristic().getChName());
-            System.out.println("Product chValue = " + ch.getChValue());
             chName.getItems().add(ch.getCharacteristic().getChName());
             chValue.getItems().add(ch.getChValue());
         }

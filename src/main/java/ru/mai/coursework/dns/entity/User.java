@@ -28,6 +28,9 @@ public class User implements Serializable {
     @Column(name = "phone")
     private String phone;
 
+    @Column(name = "admin")
+    private boolean admin;
+
     @OneToMany(mappedBy = "user")
     List<UserProducts> userProducts;
 }

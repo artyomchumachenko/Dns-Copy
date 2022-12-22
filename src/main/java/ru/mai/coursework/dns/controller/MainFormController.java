@@ -107,10 +107,11 @@ public class MainFormController implements Initializable {
      * Состояние пользователя (Авторизован или нет)
      */
     public static BooleanProperty authState = new SimpleBooleanProperty(false);
+    public static BooleanProperty adminState = new SimpleBooleanProperty(false);
     /**
      * Список текущих товаров добавленных в корзину
      */
-    private static List<Product> basketProducts = new ArrayList<>(); // ?????????
+    private static List<Product> basketProducts = new ArrayList<>();
     /**
      * Индекс с которого мы будем сохранять новые добавленные товары в базу данных
      */
@@ -172,9 +173,7 @@ public class MainFormController implements Initializable {
                 signAccButton.setDisable(true);
 
                 regAccButton.setText(user.getLogin());
-                regAccButton.setOnMouseClicked(event -> {
-                    showProfile();
-                });
+                regAccButton.setOnMouseClicked(event -> showProfile());
             } else if (oldValue) {
                 signAccButton.setVisible(true);
                 signAccButton.setDisable(false);

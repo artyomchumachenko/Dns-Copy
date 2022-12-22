@@ -8,8 +8,10 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import ru.mai.coursework.dns.HibernateUtil;
+import ru.mai.coursework.dns.entity.Product;
 import ru.mai.coursework.dns.entity.User;
 
+import java.util.LinkedHashMap;
 import java.util.List;
 
 public class UserHelper {
@@ -54,6 +56,30 @@ public class UserHelper {
         }
         session.close();
         return true;
+    }
+
+    public List<Long> getInformationAmounts() {
+        Session session = sessionFactory.openSession();
+        Query query = session.createQuery(
+                "SELECT COUNT(up.product) FROM UserProducts up\n" +
+                        "GROUP BY up.product\n" +
+                        "ORDER BY COUNT(up.product) DESC"
+        );
+        List<Long> amounts = query.getResultList();
+        session.close();
+        return amounts;
+    }
+
+    public List<Product> getInformationProducts() {
+        Session session = sessionFactory.openSession();
+        Query query = session.createQuery(
+                "SELECT up.product FROM UserProducts up\n" +
+                        "GROUP BY up.product\n" +
+                        "ORDER BY COUNT(up.product) DESC"
+        );
+        List<Product> products = query.getResultList();
+        session.close();
+        return products;
     }
 
     public void save(User user) {

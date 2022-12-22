@@ -2,7 +2,6 @@ package ru.mai.coursework.dns;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.text.Font;
@@ -32,7 +31,7 @@ public class MainApplication extends Application {
         loadFonts("/fonts/18VAG Rounded M Normal.ttf");
         FXMLLoader fxmlLoader = new FXMLLoader(
                 MainApplication.class.getResource("/fxml/main-form.fxml"));
-        Scene mainScene = new Scene((Parent) fxmlLoader.load());
+        Scene mainScene = new Scene(fxmlLoader.load());
         setScene(mainScene);
         newPrimaryStage.getIcons().add(new Image("/images/dns_small.png"));
         newPrimaryStage.setTitle("DNS");

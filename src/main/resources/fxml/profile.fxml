@@ -40,5 +40,6 @@
          </children>
       </VBox>
       <Button fx:id="exit" layoutX="154.0" layoutY="196.0" mnemonicParsing="false" onMouseClicked="#exitFromProfile" prefHeight="34.0" prefWidth="82.0" style="-fx-font-size: 16;" text="Выход" />
+      <Button fx:id="adminButton" disable="true" layoutX="276.0" layoutY="196.0" mnemonicParsing="false" onMouseClicked="#exitFromProfile" prefHeight="34.0" prefWidth="82.0" style="-fx-font-size: 16;" text="Отчёт" visible="false" />
    </children>
 </AnchorPane>

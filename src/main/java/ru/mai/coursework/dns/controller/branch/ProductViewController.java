@@ -7,8 +7,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import ru.mai.coursework.dns.controller.MainFormController;
 import ru.mai.coursework.dns.entity.Product;
-import ru.mai.coursework.dns.entity.bridge.ProductCategory;
-import ru.mai.coursework.dns.entity.bridge.ProductCh;
 import ru.mai.coursework.dns.helpers.ProductHelper;
 
 import java.util.LinkedList;
