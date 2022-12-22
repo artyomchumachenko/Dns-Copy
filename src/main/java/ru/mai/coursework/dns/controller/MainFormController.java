@@ -358,6 +358,10 @@ public class MainFormController implements Initializable {
     @FXML
     public void clickProductButtonHandler2(MouseEvent event) {
         ProductViewController.clickProductButtonHandler2(event);
+        showAlertWithoutHeaderText(
+                "Купить",
+                "Товар добавлен в корзину!"
+        );
     }
 
     /**
